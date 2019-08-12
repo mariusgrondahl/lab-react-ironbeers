@@ -1,0 +1,23 @@
+body, html{
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  margin: 2rem .5rem 2rem .5rem;
+  max-width: 1024px;
+  align-self: center;
+}
