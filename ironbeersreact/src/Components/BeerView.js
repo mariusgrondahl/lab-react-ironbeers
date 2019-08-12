@@ -10,7 +10,7 @@ class BeerView extends Component {
                 <Link to={this.props.link}><h2>{this.props.title}</h2></Link>
                 <img src={this.props.image} width="50"/>
                 <p>{this.props.description}</p>
-                <span>{this.props.created}</span>
+                <p>{this.props.created}</p>
                 <Link to={this.props.link}>Read More</Link>
             </div>
         )

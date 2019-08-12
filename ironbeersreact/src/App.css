@@ -1,8 +1,11 @@
 body, html{
-  background: #fafafa;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+h1{
+  text-align: center;
 }
 .App {
   display: flex;
@@ -26,4 +29,5 @@ body, html{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }

@@ -1,7 +1,15 @@
 .BeerView{
-    width: 30%;
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 25%;
+    background: #fafafa;
     padding: 1rem;
     margin: 1rem;
     
+}
+
+.BeerView a{
+    color: #2d2d2d;
+    text-decoration: none;
 }

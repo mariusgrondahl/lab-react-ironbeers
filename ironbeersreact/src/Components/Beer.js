@@ -24,16 +24,14 @@ class Beer extends Component {
             });
     }
     render() {
-        console.log(this.state.response);
-
-        let Beers = this.state.response.map((beer, index)=> {
+        let Beers = this.state.response.map((beer)=> {
             return(
-                
+                    
                     <BeerView title={beer.name} 
                               description={beer.description}
                               image={beer.image_url}
                               created={beer.contributed_by}
-                              link="beer-details/ + {index}"
+                              link={`/beer-details/${beer._id}`}
                               
                     />
         
@@ -41,7 +39,7 @@ class Beer extends Component {
 
         return (
             <div>
-                <h1>Welcom to all beers</h1>
+                <h1>Welcome to all beers</h1>
                 <div className="Container">
                     {Beers}
                 </div>
