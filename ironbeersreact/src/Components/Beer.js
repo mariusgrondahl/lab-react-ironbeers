@@ -1,29 +1,50 @@
 import React, { Component } from "react";
 import BeerView from "../Components/BeerView";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Beer extends Component {
-    state = {
-        beers: []
-    }
+
+    constructor(props) {
+        super(props);
+        this.state = { 
+            response: [],
+        };
+      }
 
     componentDidMount() {
-        axios.get("https://ih-beer-api.herokuapp.com/beers/")
+        //Great hack for making "this" work
+        var self = this;
+        axios.get("https://ih-beers-api.herokuapp.com/beers")
             .then(function (response){
-                console.log(response)
-                this.state.beers = response
-                console.log(response)
+                self.setState({response: response.data})
             })
             .catch(function (error) {
-                console.log(error);
+                return error;
             });
     }
     render() {
+        console.log(this.state.response);
+
+        let Beers = this.state.response.map((beer, index)=> {
+            return(
+                
+                    <BeerView title={beer.name} 
+                              description={beer.description}
+                              image={beer.image_url}
+                              created={beer.contributed_by}
+                              link="beer-details/ + {index}"
+                              
+                    />
+        
+            )})
 
         return (
             <div>
                 <h1>Welcom to all beers</h1>
-                <BeerView />
+                <div className="Container">
+                    {Beers}
+                </div>
             </div>
         )
     }

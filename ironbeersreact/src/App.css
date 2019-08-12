@@ -21,3 +21,9 @@ body, html{
   max-width: 1024px;
   align-self: center;
 }
+
+.Container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

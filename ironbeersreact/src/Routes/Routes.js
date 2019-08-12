@@ -10,6 +10,7 @@ function Routes (props) {
         <div className="Routes">
             <Route path="/" exact component={Home}/>
             <Route path="/beer" exact component={Beer}/>
+            <Route path="/beer-details" exact component={Beer}/>
             <Route path="/random" exact component={Random}/>
             <Route path="/add-beer" exact component={AddBeer}/>
         </div>
