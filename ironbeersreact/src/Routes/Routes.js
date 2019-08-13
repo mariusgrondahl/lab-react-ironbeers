@@ -5,6 +5,7 @@ import Home from "../Components/Home";
 import Random from "../Components/Random";
 import AddBeer from "../Components/AddBeer";
 import BeerViewSingle from "../Components/BeerViewSingle";
+import Sucess from "../Components/Sucess";
 
 function Routes (props) {
     return(
@@ -14,6 +15,7 @@ function Routes (props) {
             <Route path="/beer-details/:id" exact component={BeerViewSingle}/>
             <Route path="/random" exact component={Random}/>
             <Route path="/add-beer" exact component={AddBeer}/>
+            <Route path="/sucess" exact component={Sucess}/>
         </div>
     )
 }

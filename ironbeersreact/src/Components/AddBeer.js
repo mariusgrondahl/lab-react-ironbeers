@@ -35,7 +35,7 @@ class AddBeer extends Component {
             url: `${process.env.REACT_APP_API}/beers/new`
         })
         .then((response)=> {
-
+            this.props.history.push('/sucess');
         })
         .catch((error)=> {
             console.log(error)
@@ -44,6 +44,7 @@ class AddBeer extends Component {
     }
 
     render() {
+        console.log(this.props.history);
         return (
             <div>
                 <h1>Create your own Beer!</h1>
@@ -84,7 +85,7 @@ class AddBeer extends Component {
                     <div className="flexItem">
                         <label>First brewed:</label>
                         <input 
-                            type="text" 
+                            type="number" 
                             name="first_brewed" 
                             placeholder="First brewed" 
                             value={this.state.first_brewed} 

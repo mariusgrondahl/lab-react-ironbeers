@@ -30,10 +30,13 @@ class Random extends Component {
 
     render() {
         return (
-            <BeerView title={this.state.response.name} 
-                      description={this.state.response.description}
-                      image={this.state.response.image_url}            
-            />
+            <div>
+                <h1>Here is a random beer</h1>
+                <BeerView title={this.state.response.name} 
+                        description={this.state.response.description}
+                        image={this.state.response.image_url}            
+                />
+            </div>
         )
     }
 }
