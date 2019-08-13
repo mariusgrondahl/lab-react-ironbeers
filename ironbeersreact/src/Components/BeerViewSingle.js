@@ -30,12 +30,13 @@ class BeerViewSingle extends Component {
     }
 
     render() {
-        console.log(this.state.response.name)
-            
+
+        console.log(this.state.response)
         return(
             <BeerView title={this.state.response.name} 
                       description={this.state.response.description}
-                      image={this.state.response.image_url}            
+                      image={this.state.response.image_url}  
+                      buttontext="Back"         
             />
         )
     }

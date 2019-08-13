@@ -11,7 +11,7 @@ class BeerView extends Component {
                 <img src={this.props.image} width="50"/>
                 <p>{this.props.description}</p>
                 <p>{this.props.created}</p>
-                <Link to={this.props.link}>Read More</Link>
+                <Link to={this.props.link}>{this.props.buttontext}</Link>
             </div>
         )
     }
