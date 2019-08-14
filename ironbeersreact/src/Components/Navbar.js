@@ -12,7 +12,6 @@ class Navbar extends Component {
         this.state = { 
           user: null
         }
-    
       }
 
       handleLogout = (e)=> {
@@ -45,10 +44,18 @@ class Navbar extends Component {
                     <li><Link to="/beer" >All Beers</Link></li>
                     <li><Link to="/random" >Random Beers</Link></li>
                     <li><Link to="/add-beer" >Add Beers</Link></li>
-
-                    <li><Link to="/signup" >Signup</Link></li>
+                    {
+                    this.state.user?
+                    <>
+                    <li><Link to="/logout" >Logout</Link></li> 
+                    </>
+                    :
+                    <>
                     <li><Link to="/login" >Login</Link></li> 
-                    <li><Link to="/logout" >Logout</Link></li>                   
+                    <li><Link to="/signup" >Signup</Link></li>
+                    </>
+                    }
+                   
                 </ul>
             </div>
         )

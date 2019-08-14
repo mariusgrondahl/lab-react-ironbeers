@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../Css/AddBeer.css";
 import axios from "axios";
+import MainLayout from "../Layout/MainLayout";
 import qs from "querystring"; // used for parsing a javascript object in the right format (x-www-form-urlencoded)
 
 
@@ -45,7 +46,7 @@ class AddBeer extends Component {
 
     render() {
         return (
-            <div>
+            <MainLayout>
                 <h1>Create your own Beer!</h1>
                 <form className="FormContainer" onSubmit={this.handleFormSubmit}>
                     <div className="flexItem">
@@ -131,7 +132,7 @@ class AddBeer extends Component {
                     </div>
 
                 </form>
-            </div>
+            </MainLayout>
 
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Auth from "../utils/Auth";
+import MainLayout from "../Layout/MainLayout";
 const auth = new Auth();
 
 class Signup extends Component {
@@ -34,7 +35,7 @@ class Signup extends Component {
       }
     render(){
         return(
-            <div>
+            <MainLayout>
             <h1>Signup!</h1>
                 <form className="FormContainer" onSubmit={this.handleFormSubmit}>
                     <div className="flexItem">
@@ -98,7 +99,7 @@ class Signup extends Component {
                     </div>
 
                 </form>
-            </div>
+            </MainLayout>
 
 
 

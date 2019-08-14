@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Auth from "../utils/Auth";
+import MainLayout from "../Layout/MainLayout";
 const auth = new Auth();
 
 export default class Logout extends Component {
@@ -19,7 +20,7 @@ export default class Logout extends Component {
 
 	render() {
 		return (
-		
+		    <MainLayout>
 				<div>
 					{this.state.error? 
 						<h1>{this.state.error}</h1>
@@ -27,7 +28,7 @@ export default class Logout extends Component {
 						<h1>Logout in process</h1>
 					}
 				</div>
-		
+            </MainLayout>
 		)
 	}
 }

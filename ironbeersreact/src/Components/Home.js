@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import LinkHero from "../Components/LinkHero";
+import MainLayout from "../Layout/MainLayout";
 
 
 
 class Home extends Component {
     render() {
         return (
-            <div className="Container">
+            <MainLayout>
+ 
                <LinkHero 
                     title="All Beers" 
                     link="/beer"
@@ -25,7 +27,7 @@ class Home extends Component {
                     image="../img/new-beer.png"
                 />
         
-            </div>
+            </MainLayout>
         )
     }
 }

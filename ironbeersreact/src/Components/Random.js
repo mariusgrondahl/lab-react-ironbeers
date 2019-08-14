@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios"
-import BeerView from "../Components/BeerView";
+import BeerView from "./BeerView";
+import MainLayout from "../Layout/MainLayout";
 
 
 class Random extends Component {
@@ -30,13 +31,13 @@ class Random extends Component {
 
     render() {
         return (
-            <div>
+            <MainLayout>
                 <h1>Here is a random beer</h1>
                 <BeerView title={this.state.response.name} 
                         description={this.state.response.description}
                         image={this.state.response.image_url}            
                 />
-            </div>
+            </MainLayout>
         )
     }
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BeerView from "../Components/BeerView";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import MainLayout from "../Layout/MainLayout";
 
 class Beer extends Component {
 
@@ -38,12 +39,12 @@ class Beer extends Component {
             )})
 
         return (
-            <div>
+            <MainLayout>
                 <h1>Welcome to all beers</h1>
                 <div className="Container">
                     {Beers}
                 </div>
-            </div>
+            </MainLayout>
         )
     }
 }
