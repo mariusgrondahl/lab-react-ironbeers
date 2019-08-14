@@ -5,7 +5,7 @@ export default function Sucess (props) {
     return (
         <>
             <h1>You sucessfully added a Beer</h1>
-            <Link  to="/">Se all beers</Link>
+            <Link  to="/beer">Se all beers</Link>
         </>
     )
 }

@@ -1,11 +1,43 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../Css/Navbar.css";
+import { withRouter } from "react-router";
+import Auth from "../utils/Auth";
+const auth = new Auth();
 
+class Navbar extends Component {
+    constructor(props){
+        super(props);
+    
+        this.state = { 
+          user: null
+        }
+    
+      }
 
-export default class Navbar extends Component {
-    render() {
-        return(
+      handleLogout = (e)=> {
+        e.preventDefault();
+        var fixProps = this.props;
+        auth.logout()
+          .then(()=> {
+            this.setState({user: null}, ()=> {
+              fixProps.history.push("/");
+            })
+              
+          })
+          .catch((error)=> {
+            this.setState({error: error.message})
+          })
+      }
+    
+      componentDidMount() {
+        this.setState({
+          user: auth.getUser()
+        })
+      }
+    
+    render(){
+        return (
            
             <div className="Navbar">
                 <ul>
@@ -13,8 +45,14 @@ export default class Navbar extends Component {
                     <li><Link to="/beer" >All Beers</Link></li>
                     <li><Link to="/random" >Random Beers</Link></li>
                     <li><Link to="/add-beer" >Add Beers</Link></li>
+
+                    <li><Link to="/signup" >Signup</Link></li>
+                    <li><Link to="/login" >Login</Link></li> 
+                    <li><Link to="/logout" >Logout</Link></li>                   
                 </ul>
             </div>
         )
     }
 }
+
+export default withRouter(Navbar);

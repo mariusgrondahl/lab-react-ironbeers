@@ -11,8 +11,10 @@ class LinkHero extends Component {
           };
     return(
         <div className="LinkHero" style={styling}>
-            <Link to={this.props.link}></Link>
-            <h1>{this.props.title}</h1>
+         
+            <Link to={this.props.link}><h1>{this.props.title}</h1></Link>
+   
+            
         </div>
 
     )

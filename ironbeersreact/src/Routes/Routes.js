@@ -6,6 +6,9 @@ import Random from "../Components/Random";
 import AddBeer from "../Components/AddBeer";
 import BeerViewSingle from "../Components/BeerViewSingle";
 import Sucess from "../Components/Sucess";
+import Signup from "../Components/Signup";
+import Login from "../Components/Login";
+import Logout from "../Components/Logout";
 
 function Routes (props) {
     return(
@@ -16,6 +19,9 @@ function Routes (props) {
             <Route path="/random" exact component={Random}/>
             <Route path="/add-beer" exact component={AddBeer}/>
             <Route path="/sucess" exact component={Sucess}/>
+            <Route path="/signup" exact component={Signup}/>
+            <Route path="/login" exact component={Login}/>
+            <Route path="/logout" exact component={Logout}/>
         </div>
     )
 }

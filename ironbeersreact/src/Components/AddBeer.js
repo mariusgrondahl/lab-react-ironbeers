@@ -44,7 +44,6 @@ class AddBeer extends Component {
     }
 
     render() {
-        console.log(this.props.history);
         return (
             <div>
                 <h1>Create your own Beer!</h1>

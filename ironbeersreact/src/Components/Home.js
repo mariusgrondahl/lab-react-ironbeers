@@ -9,19 +9,19 @@ class Home extends Component {
             <div className="Container">
                <LinkHero 
                     title="All Beers" 
-                    link="/"
+                    link="/beer"
                     image="../img/beers.png"
                 />
 
                 <LinkHero 
                     title="Random" 
-                    link="/"
+                    link="/random"
                     image="../img/random-beer.png"
                 />
 
                 <LinkHero 
                     title="Add a Beer:D" 
-                    link="/"
+                    link="/add-beer"
                     image="../img/new-beer.png"
                 />
         
